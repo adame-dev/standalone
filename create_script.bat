@@ -22,9 +22,9 @@ mkdir client
 mkdir server
 
 cd client
-copy NUL client.lua
+copy NUL main.lua
 cd ../server
-copy NUL server.lua
+copy NUL main.lua
 
 
 
