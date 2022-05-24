@@ -1,5 +1,5 @@
 # adame-scriptcreation
-FiveM base script automatic creation used for Adame projects.
+FiveM standalone script creation used for Adame projects.
 
 ## Installation
 1. Clone the repository to `resources`
