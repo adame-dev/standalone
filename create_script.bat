@@ -1,6 +1,7 @@
 @echo off
 set /p scriptname="Script name: "
 set /p scriptdescription="Script description: "
+set /p githubrepo="Github repository (example: NickBlade/test): "
 mkdir %scriptname%
 echo fx_version 'adamant' > %scriptname%/fxmanifest.lua
 echo game 'gta5' >> %scriptname%/fxmanifest.lua
@@ -22,18 +23,16 @@ mkdir client
 mkdir server
 
 cd client
-copy NUL main.lua
+copy NUL client.lua
 cd ../server
-copy NUL main.lua
+copy NUL server.lua
 
-
-
-
-
-
-
-
-
-
-
+cd ..
+git init
+git add *
+git commit -m "Upload (standalone script)"
+git branch -M main
+git remote add origin git@github.com:%githubrepo%.git
+git remote set-url origin https://github.com/%githubrepo%.git
+git push -u origin main
 
