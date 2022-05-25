@@ -7,13 +7,14 @@ echo fx_version 'adamant' > %scriptname%/fxmanifest.lua
 echo game 'gta5' >> %scriptname%/fxmanifest.lua
 echo description '%scriptdescription%' >> %scriptname%/fxmanifest.lua
 echo version '1.0.0' >> %scriptname%/fxmanifest.lua
-echo server_scripts { >> %scriptname%/fxmanifest.lua
+echo shared_scripts { >> %scriptname%/fxmanifest.lua
 echo 	'config.lua', >> %scriptname%/fxmanifest.lua
-echo 	'server/main.lua' >> %scriptname%/fxmanifest.lua
+echo } >> %scriptname%/fxmanifest.lua
+echo server_scripts { >> %scriptname%/fxmanifest.lua
+echo 	'server/server.lua' >> %scriptname%/fxmanifest.lua
 echo } >> %scriptname%/fxmanifest.lua
 echo client_scripts { >> %scriptname%/fxmanifest.lua
-echo 	'config.lua', >> %scriptname%/fxmanifest.lua
-echo 	'client/main.lua' >> %scriptname%/fxmanifest.lua
+echo 	'client/client.lua' >> %scriptname%/fxmanifest.lua
 echo } >> %scriptname%/fxmanifest.lua
 
 echo Config = {} > %scriptname%/config.lua
@@ -35,4 +36,12 @@ git branch -M main
 git remote add origin git@github.com:%githubrepo%.git
 git remote set-url origin https://github.com/%githubrepo%.git
 git push -u origin main
+
+
+
+
+
+
+
+
 
